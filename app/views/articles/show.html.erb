@@ -1,0 +1,11 @@
+<h1><%= @article.title %>
+    <%= link_to "Editar", edit_article_path %>
+    <%= link_to "Delete",article_path(@article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+</h1>
+
+<div class="container" style="background-color:#D9D9D9; padding: 10px; margin: 10px;">
+  <%= @article.content %>
+</div>
+<hr>
+<%= link_to "<-Back", articles_path %>
